@@ -10,9 +10,14 @@
 		<property name="connection.password">hsh</property>
 
 		<property name="connection.pool_size">1</property>
-		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
-		<property name="show_sql">true</property>
+		<!--配置数据库适配器( 使用何中数据库) -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<!-- 是否显示hibernate的SQL语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- 实体类导出至数据库时，如果存在的表处理方式： hibernate.hbm2ddl.auto :(create-drop、 create、 
+			update、 validate) -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
 
-		<mapping resource="edu/demo/model/user.hbm.xml" />
+		<!-- <mapping resource="edu/demo/model/user.hbm.xml" />-->
 	</session-factory>
 </hibernate-configuration>

@@ -22,10 +22,12 @@ public class DemoServiceTest {
 		int size = demoService.findList().size();
 
 		Demo entity = new Demo();
-		entity.setUserId(71);
+		entity.setUserId(472);
 		entity.setUserName("Leefour");
 		entity.setAge(99);
 		demoService.add(entity);
+		
+		
 
 		int finalSize = demoService.findList().size();
 
